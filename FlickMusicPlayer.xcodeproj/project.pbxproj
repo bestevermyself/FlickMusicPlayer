@@ -14,6 +14,8 @@
 		718B1D1A1DEC52D300F6C8E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 718B1D181DEC52D300F6C8E5 /* LaunchScreen.storyboard */; };
 		718B1D251DEC52D300F6C8E5 /* FlickMusicPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718B1D241DEC52D300F6C8E5 /* FlickMusicPlayerTests.swift */; };
 		718B1D301DEC52D300F6C8E5 /* FlickMusicPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718B1D2F1DEC52D300F6C8E5 /* FlickMusicPlayerUITests.swift */; };
+		718B1D401DEC531B00F6C8E5 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 718B1D3F1DEC531B00F6C8E5 /* iCarousel.m */; };
+		718B1D421DEC547500F6C8E5 /* page.png in Resources */ = {isa = PBXBuildFile; fileRef = 718B1D411DEC547500F6C8E5 /* page.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,10 @@
 		718B1D2B1DEC52D300F6C8E5 /* FlickMusicPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickMusicPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		718B1D2F1DEC52D300F6C8E5 /* FlickMusicPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickMusicPlayerUITests.swift; sourceTree = "<group>"; };
 		718B1D311DEC52D300F6C8E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		718B1D3D1DEC531A00F6C8E5 /* FlickMusicPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlickMusicPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
+		718B1D3E1DEC531B00F6C8E5 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		718B1D3F1DEC531B00F6C8E5 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		718B1D411DEC547500F6C8E5 /* page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,10 @@
 				718B1D161DEC52D300F6C8E5 /* Assets.xcassets */,
 				718B1D181DEC52D300F6C8E5 /* LaunchScreen.storyboard */,
 				718B1D1B1DEC52D300F6C8E5 /* Info.plist */,
+				718B1D3E1DEC531B00F6C8E5 /* iCarousel.h */,
+				718B1D3F1DEC531B00F6C8E5 /* iCarousel.m */,
+				718B1D3D1DEC531A00F6C8E5 /* FlickMusicPlayer-Bridging-Header.h */,
+				718B1D411DEC547500F6C8E5 /* page.png */,
 			);
 			path = FlickMusicPlayer;
 			sourceTree = "<group>";
@@ -194,6 +204,7 @@
 					718B1D0B1DEC52D300F6C8E5 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 38ARTP2XDL;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					718B1D1F1DEC52D300F6C8E5 = {
@@ -235,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				718B1D421DEC547500F6C8E5 /* page.png in Resources */,
 				718B1D1A1DEC52D300F6C8E5 /* LaunchScreen.storyboard in Resources */,
 				718B1D171DEC52D300F6C8E5 /* Assets.xcassets in Resources */,
 				718B1D151DEC52D300F6C8E5 /* Main.storyboard in Resources */,
@@ -262,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				718B1D401DEC531B00F6C8E5 /* iCarousel.m in Sources */,
 				718B1D121DEC52D300F6C8E5 /* ViewController.swift in Sources */,
 				718B1D101DEC52D300F6C8E5 /* AppDelegate.swift in Sources */,
 			);
@@ -413,11 +426,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 38ARTP2XDL;
 				INFOPLIST_FILE = FlickMusicPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shuhei-hasegawa.FlickMusicPlayer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlickMusicPlayer/FlickMusicPlayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,11 +442,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 38ARTP2XDL;
 				INFOPLIST_FILE = FlickMusicPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shuhei-hasegawa.FlickMusicPlayer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlickMusicPlayer/FlickMusicPlayer-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
